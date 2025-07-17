@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>熊大造价 - Word实战课程</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Tailwind配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#FF7D00',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(22, 93, 255, 0.1);
+      }
+    }
+  </style>
+</head>
+<body class="font-inter bg-gray-50">
+  <div class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+    <!-- 主卡片容器 -->
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="flex flex-col md:flex-row">
+        <!-- 左侧图片区域 -->
+        <div class="md:w-1/4 bg-gradient-to-br from-primary to-blue-400 p-8 flex items-center justify-center">
+          <div class="relative w-full h-64 md:h-full">
+            <div class="absolute w-32 h-32 bg-white/20 rounded-lg rotate-12 top-10 left-5"></div>
+            <div class="absolute w-40 h-40 bg-white/30 rounded-lg -rotate-6 top-20 right-10"></div>
+            <div class="absolute w-28 h-28 bg-white/40 rounded-lg rotate-3 bottom-10 left-16"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <i class="fa fa-file-word-o text-white text-9xl md:text-10xl drop-shadow-lg"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右侧内容区域 -->
+        <div class="md:w-3/4 p-6 md:p-8">
+          <!-- 标题和品牌 -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between mb-6">
+            <div>
+              <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-dark mb-1">Word实战精通课程</h1>
+              <p class="text-primary font-semibold flex items-center">
+                <i class="fa fa-university mr-2"></i>熊大造价
+              </p>
+            </div>
+
+            <!-- 关键数据 -->
+            <div class="flex space-x-4 mt-4 md:mt-0">
+              <div class="bg-gray-50 rounded-lg px-4 py-2 text-center card-hover">
+                <p class="text-xl font-bold text-primary">8大专题</p>
+              </div>
+              <div class="bg-gray-50 rounded-lg px-4 py-2 text-center card-hover">
+                <p class="text-xl font-bold text-primary">97课时</p>
+              </div>
+              <div class="bg-secondary text-white rounded-lg px-4 py-2 text-center shadow-lg card-hover">
+                <p class="text-xl font-bold">¥249</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 专题内容网格 -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- 专题1 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">01</span>
+                软件基础
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>三大元素录入技巧</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>格式批量转换方法</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>界面高效操作指南</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>文件管理与批量打印</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题2 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">02</span>
+                常用文档处理
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>自动编码快速设置</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>公文专业排版规范</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>一页纸设计原则</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>字体搭配与通知编制</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题3 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">03</span>
+                长文档处理
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>段落结构规划方法</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>目录智能美化技巧</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>格式复用高级应用</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>自动化排版实战</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题4 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">04</span>
+                Word表格专题
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>表格基础与函数计算</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>一键美化排版技巧</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>高级简历制作方法</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>视觉动线设计美化</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题5 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">05</span>
+                图形专题
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>图形基础操作技巧</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>批量设置与格式统一</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>图形抠图与精细修饰</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>图形排列与组合应用</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题6 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">06</span>
+                交互专题
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>智能文件校对功能</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>多版本文档对比</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>专业文件审阅流程</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>文档权限限制设置</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题7 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">07</span>
+                批量增删查改
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>批量操作基础技巧</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>增删查改实战总结</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>自动化控件定制开发</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>多行业案例深度解析</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 专题8 -->
+            <div class="bg-gray-50 rounded-xl p-4 card-hover border border-gray-100">
+              <h3 class="text-lg font-bold text-dark mb-3 flex items-center">
+                <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-2">08</span>
+                联动与批量
+              </h3>
+              <ul class="space-y-2 text-gray-700 text-sm">
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>报告自动刷新技术</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>合同批量生成系统</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>跨文件同步更新方法</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fa fa-check text-primary mt-1 mr-2 text-xs"></i>
+                  <span>主控文档与子文档管理</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 行动召唤按钮 -->
+          <div class="mt-8 text-center">
+            <button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg font-semibold shadow-lg transform transition-all hover:scale-105 inline-flex items-center">
+              <i class="fa fa-shopping-cart mr-2"></i> 立即报名学习
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
